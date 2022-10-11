@@ -1,0 +1,63 @@
+{
+  "name": "wp-base",
+  "version": "1.0.0",
+  "description": "Base for wordpress theme",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "cross-env NODE_ENV=development webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/20LDiegoM/WP-Base.git"
+  },
+  "keywords": [
+    "theme",
+    "base",
+    "wordpress"
+  ],
+  "author": "Luis D. Murcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/20LDiegoM/WP-Base/issues"
+  },
+  "homepage": "https://github.com/20LDiegoM/WP-Base#readme",
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "last 6 iOS versions"
+  ],
+  "dependencies": {
+    "aos": "^2.3.4",
+    "assets-webpack-plugin": "^7.1.1",
+    "babel": "^6.23.0",
+    "bootstrap": "^5.2.2",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.2.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "swiper": "^8.4.3",
+    "terser-webpack-plugin": "^5.3.6",
+    "throttle-debounce": "^5.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-messages": "^2.0.4",
+    "webpack-notifier": "^1.15.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@types/assets-webpack-plugin": "^7.1.0",
+    "@types/browser-sync-webpack-plugin": "^2.2.2",
+    "babel-loader": "^8.2.5",
+    "webpack-assets-manifest": "^5.1.0"
+  }
+}
