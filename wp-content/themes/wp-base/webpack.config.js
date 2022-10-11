@@ -18,9 +18,9 @@ module.exports = {
     libs: ['./src/libs.js'],
   },
   output: {
+    //clean: true,
     path: path.join(__dirname, './build'),
     filename: 'js/[name].bundle.js',
-    clean: true,
   },
 
   devtool: DEV ? 'inline-source-map' : 'eval',
@@ -85,14 +85,15 @@ module.exports = {
   },
 
   plugins: [
-    
     new MiniCssExtractPlugin({
       filename: "css/[name].bundle.css",
     }),
-    // new WebpackAssetsManifest({
-    //   // Options go here
-    //   output: './manifest.json',
-    // }),
+    new AssetsPlugin({
+      filename: 'assets.json',
+      removeFullPathAutoPrefix: true,
+      useCompilerPath: true,
+      prettyPrint: true
+    }),
     DEV &&
     new BrowserSyncPlugin({
       host: 'http://wordpress-base-local.test/',
@@ -107,14 +108,6 @@ module.exports = {
       new WebpackMessages({
       name: 'webpack',
       logger: str => console.log(`---> ${str}`)
-    }),
-    new AssetsPlugin({
-      //path: './build',
-      fullPath: true,
-      removeFullPathAutoPrefix: true,
-      useCompilerPath: true,
-      prettyPrint: true
-
     }),
   ].filter(Boolean),
 }

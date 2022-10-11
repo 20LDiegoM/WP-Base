@@ -57,4 +57,4 @@ vendor/
 .vscode
 wp-content/themes/**/node_modules/
 wp-content/themes/**/build/
-wp-content/plugins/*
+
